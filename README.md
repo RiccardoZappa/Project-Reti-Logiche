@@ -1,26 +1,4 @@
-Progetto finale di Reti Logiche
-Prof. Fornaciari, Prof. Palermo e Prof. Salice
-(CHANGELOG V3)
-Versione (12 gennaio -> 18 gennaio)
-MODIFICA:
-Aggiunti 2 chiarimenti
-1. Nella sezione DATI è stata aggiunta la seguente frase:
-“La dimensione massima della sequenza di ingresso è 255 byte.”
-2. Nella sezione ULTERIORI NOTE, è stata aggiunta la seguente frase facendo
-riferimento all’azione di una codifica successiva:
-“La quantità di parole da codificare sarà sempre memorizzata all’indirizzo 0 e
-l’uscita deve essere sempre memorizzata a partire dall’indirizzo 1000.”
-Versione (10 dicembre -> 12 gennaio)
-MODIFICA:
-E’ stato cambiato il diagramma degli stati invertendo l’ordine delle uscite (precedentemente
-p2k, p1k ora p1k, p2k) per essere più coerenti con il loro riordino per la generazione del
-flusso di uscita. Il testo è stato aggiornato di conseguenza come segue (la parte in grassetto
-è stata aggiunta).
-“Il convolutore è una macchina sequenziale sincrona con un clock globale e un
-segnale di reset con il seguente diagramma degli stati che ha nel suo 00 lo stato
-iniziale, con uscite in ordine P1K, P2K (ogni transizione è annotata come
-Uk/p1k, p2k)”
-1
+
 Progetto finale di Reti Logiche
 Prof. Fornaciari, Prof. Palermo e Prof. Salice
 (AGGIORNATO AL 12 Gennaio 2021)
@@ -37,6 +15,8 @@ flusso continuo Y. Il flusso Y è ottenuto come concatenamento alternato dei due
 Utilizzando la notazione riportata in figura, il bit uk genera i bit p1k e p2k che sono poi
 concatenati per generare un flusso continuo yk (flusso da 1 bit). La sequenza d’uscita Z è la
 parallelizzazione, su 8 bit, del flusso continuo yk.
+
+
 ![image](https://user-images.githubusercontent.com/100212223/219747335-efa24b93-d113-4bcf-897c-e1b5ddb6c294.png)
 
 La lunghezza del flusso U è 8*W, mentre la lunghezza del flusso Y è 8*W*2 (Z=2*W).
